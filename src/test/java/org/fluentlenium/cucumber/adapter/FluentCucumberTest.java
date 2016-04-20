@@ -44,6 +44,7 @@ public class FluentCucumberTest extends FluentTestRunnerAdapter {
         } catch (MalformedURLException e)
         {
             e.printStackTrace();
+            System.out.println("WebDriver jest nullem");
             return null;
         }
     }
