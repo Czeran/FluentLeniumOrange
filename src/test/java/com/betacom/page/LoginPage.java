@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-@PageUrl("http://172.30.4.161/Saba/Web/Main")
+//@PageUrl("http://172.30.4.161/Saba/Web/Main")
 public class LoginPage extends AbstractPage {
 
     public static final By USERNAME_INPUT = By.name("j_username");
@@ -20,6 +20,13 @@ public class LoginPage extends AbstractPage {
         else
             return true;
     }
+
+    @Override
+    public String getUrl()
+    {
+        return "http://172.30.4.161/Saba/Web/Main";
+    }
+
 
 
     public void login(String username, String password)
