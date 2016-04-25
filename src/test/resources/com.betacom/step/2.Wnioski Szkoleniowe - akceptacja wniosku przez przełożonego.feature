@@ -20,6 +20,7 @@
     Wtedy powinienem zobaczyć szczegóły wniosku szkoleniowego swojego podwładnego do akceptacji
 
   @Anuluj
+  @Quit
   Scenariusz: Przełożony akceptuje wniosek szkoleniowy przesłany przez pracownika
     Zakładając że wyszukałem interesujący mnie szablon do akceptacji
     Oraz nacisnę przycisk "Akceptuj"

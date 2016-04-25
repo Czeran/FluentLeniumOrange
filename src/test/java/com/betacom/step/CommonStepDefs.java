@@ -25,10 +25,10 @@ public class CommonStepDefs extends FluentCucumberTest {
     @Page
     AbstractPage abstractPage;
 
-    @After("@Close")
+    @After("@Quit")
     public void closeDriver()
     {
-        abstractPage.getDriver().close();
+        abstractPage.getDriver().quit();
     }
 
     @After("@Wyloguj")
