@@ -6,8 +6,9 @@
     Chcę zaakceptować wniosek
     W celu przesłania go do dalszej akceptacji
 
-    @ManagerWnioski
+#    @ManagerWnioski
   Scenariusz: Przełożony wyszukuje istniejący wniosek szkoleniowy pracownika do akceptacji
+    Zakładając że jestem zalogowany jako "managerwnioski"
     Zakładając że posiadam przynajmniej jeden wniosek do akceptacji
     Oraz znajduje się na stronie akceptacji wniosków przez przełożonego
     Kiedy uzupełnie formularz wyszukiwania wniosku do akceptacji jako przełożony
@@ -19,9 +20,9 @@
     Oraz nacisnę przycisk "Szczegóły"
     Wtedy powinienem zobaczyć szczegóły wniosku szkoleniowego swojego podwładnego do akceptacji
 
-  @Anuluj
-  @Quit
+#  @Anuluj
   Scenariusz: Przełożony akceptuje wniosek szkoleniowy przesłany przez pracownika
+    I nacisnę przycisk "Anuluj"
     Zakładając że wyszukałem interesujący mnie szablon do akceptacji
     Oraz nacisnę przycisk "Akceptuj"
     Wtedy powinienem zobaczyć potwierdzenie wysłania wniosku szkoleniowego podwładnego do dalszej akceptacji

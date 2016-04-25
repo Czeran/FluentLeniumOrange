@@ -1,5 +1,7 @@
 package com.betacom.step;
 
+import com.betacom.page.LoginPage;
+import com.betacom.page.MainPage;
 import com.betacom.page.NewTrainingRequestFormPage;
 import com.betacom.page.NewTrainingRequestPage;
 import cucumber.api.Scenario;
@@ -10,6 +12,7 @@ import cucumber.api.java.pl.Zakładając;
 import org.fluentlenium.core.annotation.Page;
 import org.fluentlenium.cucumber.adapter.FluentCucumberTest;
 import org.fluentlenium.cucumber.adapter.util.SharedDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
@@ -24,6 +27,26 @@ public class NewTrainingRequestStepDefs extends FluentCucumberTest {
     @Page
     NewTrainingRequestFormPage newTrainingRequestFormPage;
 
+    @Page
+    LoginPage loginPage;
+
+    @Page
+    MainPage mainPage;
+
+    @Zakładając("^wylogowuje się$")
+    public void iLogedOut() {
+        click(find(By.cssSelector("a[onclick='openNodes(event);']")));
+        click(find(By.cssSelector("a[onclick='logOff();return false;']")));
+    }
+
+    @Zakładając("^że jestem zalogowany jako \"([^\"]*)\"$")
+    public void iLoged(String login) {
+        loginPage.go();
+        loginPage.getDriver().manage().window().maximize();
+        loginPage.getDriver().switchTo().frame("SabaMain");
+        loginPage.login(login, "welcome");
+        mainPage.isAt();
+    }
 
     @Zakładając("^uzupełnię formularz wyszukiwania szablonu wniosku szkoleniowego$")
     public void uzupełnię_formularz_wyszukiwania_szablonu_wniosku_szkoleniowego() throws IOException {

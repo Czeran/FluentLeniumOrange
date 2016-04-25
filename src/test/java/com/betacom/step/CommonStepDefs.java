@@ -31,27 +31,27 @@ public class CommonStepDefs extends FluentCucumberTest {
         abstractPage.getDriver().quit();
     }
 
-    @After("@Wyloguj")
-    public void logOut()
-    {
-        click(find(By.cssSelector("a[onclick='openNodes(event);']")));
-        click(find(By.cssSelector("a[onclick='logOff();return false;']")));
-    }
+//    @After("@Wyloguj")
+//    public void logOut()
+//    {
+//        click(find(By.cssSelector("a[onclick='openNodes(event);']")));
+//        click(find(By.cssSelector("a[onclick='logOff();return false;']")));
+//    }
 
     @Before("@Anuluj")
     public void cancel() {
         abstractPage.clickOn("Anuluj");
     }
 
-    @Before("@UżytkownikWnioski")
-    public void loginAsUzytkownikWnioski()
-    {
-        loginPage.go();
-        loginPage.getDriver().manage().window().maximize();
-        loginPage.getDriver().switchTo().frame("SabaMain");
-        loginPage.login("uzytkownikwnioski", "welcome");
-        mainPage.isAt();
-    }
+//    @Before("@UżytkownikWnioski")
+//    public void loginAsUzytkownikWnioski()
+//    {
+//        loginPage.go();
+//        loginPage.getDriver().manage().window().maximize();
+//        loginPage.getDriver().switchTo().frame("SabaMain");
+//        loginPage.login("uzytkownikwnioski", "welcome");
+//        mainPage.isAt();
+//    }
 
     @Before("@ManagerWnioski")
     public void loginAsManagerWnioski()

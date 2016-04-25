@@ -6,8 +6,9 @@
     Chcę utworzyć nowy wniosek szkoleniowy
     W celu przesłania go do dalszej akceptacji
 
-    @UżytkownikWnioski
+#    @UżytkownikWnioski
   Scenariusz: Użytkownik wyszukuje istniejący szablon wniosku szkoleniowego
+    Zakładając  że jestem zalogowany jako "uzytkownikwnioski"
     Zakładając że jestem na stronie wyszukiwania szablonu wniosku szkoleniowego
     Oraz uzupełnię formularz wyszukiwania szablonu wniosku szkoleniowego
     I nacisnę przycisk "Wyszukaj"
@@ -24,8 +25,9 @@
     I nacisnę przycisk "Zapisz"
     Wtedy powinienem zobaczyć potwierdzenie stworzenia nowego wniosku szkoleniowego
 
-    @Wyloguj
+#    @Wyloguj
   Scenariusz: Użytkownik wysyła utworzony wniosek szkoleniowy do akcpetacji
     Zakładając że jestem na stronie z utworzonym wnioskiem szkoleniowym
     Oraz nacisnę przycisk "Prześlij do akceptacji"
     Wtedy powinienem zobaczyć potwierdzenie wysłania wniosku szkoleniowego do ackeptacji
+    I wylogowuje się
